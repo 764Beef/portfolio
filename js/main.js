@@ -7,7 +7,7 @@
   const yearEl = document.querySelector('footer span:first-child');
   if (yearEl) {
     const year = new Date().getFullYear();
-    yearEl.textContent = `© ${year} YourName`;
+    yearEl.textContent = `© ${year} Beef`;
   }
 
   const NAV_HEIGHT = 80;
