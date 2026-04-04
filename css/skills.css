@@ -1,8 +1,4 @@
-/* ─────────────────────────────────────────
-   skills.css  —  Skills section
-───────────────────────────────────────── */
 
-/* Primary big cards row */
 .skills-primary {
   display: flex;
   justify-content: center;
@@ -42,7 +38,6 @@
   color: var(--text-primary);
 }
 
-/* Secondary pill row */
 .skills-secondary {
   display: flex;
   justify-content: center;

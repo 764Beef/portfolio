@@ -1,6 +1,3 @@
-/* ─────────────────────────────────────────
-   about.css  —  About section
-───────────────────────────────────────── */
 
 #about .about-grid {
   display: grid;
@@ -9,7 +6,6 @@
   align-items: center;
 }
 
-/* ── Text block ── */
 .about-text {
   color: var(--text-secondary);
   font-size: 15px;
@@ -19,7 +15,6 @@
 .about-text p { margin-bottom: 16px; }
 .about-text p:last-child { margin-bottom: 0; }
 
-/* ── Stats grid ── */
 .about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;

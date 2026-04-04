@@ -1,16 +1,9 @@
-/* ─────────────────────────────────────────
-   learning.css  —  Learning / WIP cards
-   (also defines shared .card and .cards-grid
-    used by both learning & projects)
-───────────────────────────────────────── */
-
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
-/* ── Base card ── */
 .card {
   background: var(--black-2);
   border: 1px solid var(--border);
@@ -36,7 +29,24 @@
 .card:hover { border-color: var(--border-hover); transform: translateY(-3px); background: var(--black-3); }
 .card:hover::before { opacity: 1; }
 
-/* ── Card content ── */
+.card-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--black-4);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.card-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+}
+
 .card-title {
   font-family: var(--font-display);
   font-weight: 600;
@@ -54,7 +64,6 @@
   flex: 1;
 }
 
-/* ── Progress bar ── */
 .progress-wrap { margin-top: auto; }
 
 .progress-label {

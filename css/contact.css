@@ -1,8 +1,5 @@
-/* ─────────────────────────────────────────
-   contact.css  —  Contact section
-───────────────────────────────────────── */
 
-/* Quick links row */
+
 .contact-quick-links {
   display: flex;
   justify-content: center;
