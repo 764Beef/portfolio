@@ -1,17 +1,15 @@
-/* ─────────────────────────────────────────
-   main.js  —  Entry point & misc features
-───────────────────────────────────────── */
+/*
+ main.js  —  Entry point & misc features
+*/
 
 (function () {
 
-  // ── Update footer copyright year automatically ──
   const yearEl = document.querySelector('footer span:first-child');
   if (yearEl) {
     const year = new Date().getFullYear();
     yearEl.textContent = `© ${year} YourName`;
   }
 
-  // ── Smooth scroll for anchor links ──
   const NAV_HEIGHT = 80;
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -26,7 +24,6 @@
     });
   });
 
-  // ── Stat counter animation ──
   function animateCounter(el, endValue, suffix) {
     const duration = 1200;
     const start    = performance.now();
@@ -70,7 +67,6 @@
   const statsSection = document.querySelector('.about-stats');
   if (statsSection) counterObserver.observe(statsSection);
 
-  // ── Typing effect for hero subtitle ──
   const heroSub = document.querySelector('.hero-sub');
   if (heroSub) {
     const originalText = heroSub.textContent;
@@ -89,7 +85,6 @@
     }, 700);
   }
 
-  // ── Tilt effect on project cards ──
   document.querySelectorAll('.project-card, .card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect  = card.getBoundingClientRect();
@@ -110,7 +105,6 @@
     });
   });
 
-  // ── Contact form handler ──
   async function handleContactSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('.contact-submit');
@@ -149,7 +143,6 @@
     }
   }
 
-  // Expose to global scope for inline onsubmit
   window.handleContactSubmit = handleContactSubmit;
 
 })();
