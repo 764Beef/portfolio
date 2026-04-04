@@ -1,4 +1,4 @@
-# portfolio# Beef Portfolio
+# portfolio
 
 My personal portfolio website. Pure HTML/CSS/JS, no frameworks, no build step.
 
