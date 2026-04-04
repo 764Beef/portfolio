@@ -1,0 +1,52 @@
+/* ─────────────────────────────────────────
+   variables.css  —  Design tokens
+───────────────────────────────────────── */
+
+:root {
+  /* Blues */
+  --blue-bright:   #38bdf8;
+  --blue-mid:      #0ea5e9;
+  --blue-deep:     #0369a1;
+  --blue-glow:     rgba(56, 189, 248, 0.15);
+  --blue-glow-lg:  rgba(56, 189, 248, 0.08);
+
+  /* Backgrounds */
+  --bg:            #020917;
+  --black-1:       #040e1f;
+  --black-2:       #071428;
+  --black-3:       #0c1d38;
+  --black-4:       #112240;
+  --black-5:       #162d50;
+
+  /* Borders */
+  --border:        rgba(56, 189, 248, 0.12);
+  --border-hover:  rgba(56, 189, 248, 0.45);
+
+  /* Text */
+  --text-primary:   #e8f4fd;
+  --text-secondary: #7fb9d4;
+  --text-muted:     #3d6b84;
+
+  /* Accents */
+  --accent:        var(--blue-bright);
+  --accent-dim:    var(--blue-deep);
+
+  /* Green for available dot */
+  --green:         #22c55e;
+
+  /* Radii */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+
+  /* Layout */
+  --max-width: 1100px;
+
+  /* Easing — BOTH names needed */
+  --ease:     cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+
+  /* Fonts */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}

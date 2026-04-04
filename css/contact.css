@@ -1,0 +1,127 @@
+/* ─────────────────────────────────────────
+   contact.css  —  Contact section
+───────────────────────────────────────── */
+
+/* Quick links row */
+.contact-quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.contact-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--black-2);
+  color: var(--text-secondary);
+  font-size: 13px;
+  transition: all 0.25s var(--ease);
+}
+
+.contact-quick-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--blue-bright);
+  background: var(--blue-glow);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Form + side layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.contact-input {
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  width: 100%;
+}
+
+.contact-input::placeholder { color: var(--text-muted); }
+
+.contact-input:focus {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.08);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  gap: 8px;
+}
+
+/* Side cards */
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-side-card {
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.contact-side-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.contact-side-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.contact-side-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
