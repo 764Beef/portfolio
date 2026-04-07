@@ -7,7 +7,7 @@ My personal portfolio website. Pure HTML/CSS/JS, no frameworks, no build step.
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-**Live:** [beef1312.online](https://beef1312.xyz)
+**Live:** [beef1312.xyz](https://beef1312.xyz)
 
 ---
 
