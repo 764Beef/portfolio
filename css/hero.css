@@ -29,7 +29,6 @@
   max-width: 520px;
 }
 
-/* ── Available badge ── */
 .available-badge {
   display: inline-flex;
   align-items: center;
@@ -55,7 +54,6 @@
   animation: pulseDot 2s infinite;
 }
 
-/* ── Heading ── */
 .hero-title {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
@@ -70,7 +68,6 @@
   animation: fadeUp 0.7s var(--ease-out) 0.2s forwards;
 }
 
-/* ── Subtitle ── */
 .hero-sub {
   font-size: 16px;
   color: var(--text-secondary);
@@ -81,7 +78,6 @@
   animation: fadeUp 0.7s var(--ease-out) 0.35s forwards;
 }
 
-/* ── CTA buttons ── */
 .hero-actions {
   display: flex;
   gap: 14px;

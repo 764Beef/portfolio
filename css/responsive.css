@@ -7,12 +7,10 @@
 
 @media (max-width: 768px) {
 
-  /* Nav */
   nav { padding: 18px 24px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 
-  /* Hero */
   .hero-inner {
     flex-direction: column;
     gap: 48px;
