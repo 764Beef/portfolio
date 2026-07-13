@@ -1,4 +1,3 @@
-/*cursor.js  —  Custom cursor behaviour*/
 
 (function () {
   const dot  = document.getElementById('cursor');
