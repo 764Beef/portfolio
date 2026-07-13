@@ -1,4 +1,3 @@
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -17,6 +16,48 @@
 @keyframes shimmer {
   0%   { background-position: -200% center; }
   100% { background-position:  200% center; }
+}
+
+@keyframes auroraDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  25%  { transform: translate3d(-6%, 4%, 0) scale(1.12); }
+  50%  { transform: translate3d(5%, -6%, 0) scale(1.05); }
+  75%  { transform: translate3d(6%, 6%, 0) scale(1.14); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes auroraHue {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50%      { filter: hue-rotate(18deg); }
+}
+
+@keyframes auroraSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes cometPass {
+  0%   { transform: translate3d(0, 0, 0) rotate(35deg); opacity: 0; }
+  6%   { opacity: 1; }
+  16%  { opacity: 0; }
+  100% { transform: translate3d(140vw, 140vh, 0) rotate(35deg); opacity: 0; }
+}
+
+@keyframes cometPassReverse {
+  0%   { transform: translate3d(0, 0, 0) rotate(-35deg); opacity: 0; }
+  6%   { opacity: 1; }
+  16%  { opacity: 0; }
+  100% { transform: translate3d(-140vw, 140vh, 0) rotate(-35deg); opacity: 0; }
+}
+
+@keyframes starDrift {
+  0%   { background-position: 0 0, 40px 90px, 110px 30px; }
+  100% { background-position: 180px 180px, -220px 260px, -140px -140px; }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 0.85; }
 }
 
 
@@ -72,4 +113,84 @@
   border-color: var(--border-hover);
   color: var(--blue-bright);
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+@keyframes cursorRingSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+
+.eruption-core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, var(--blue-bright) 35%, var(--blue-mid) 70%, transparent 100%);
+  box-shadow: 0 0 30px 10px rgba(56, 189, 248, 0.8);
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  animation: eruptionCore 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.eruption-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-bright);
+  pointer-events: none;
+  z-index: 9996;
+  transform: translate(-50%, -50%);
+  animation: eruptionRing 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.eruption-ring.delay {
+  border-color: var(--blue-mid);
+  animation-duration: 1.2s;
+  animation-delay: 0.08s;
+}
+
+.eruption-particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue-bright);
+  box-shadow: 0 0 6px 1px rgba(56, 189, 248, 0.8);
+  pointer-events: none;
+  z-index: 9996;
+  transform: translate(-50%, -50%);
+  animation: eruptionParticle 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+
+@keyframes eruptionCore {
+  0%   { transform: translate(-50%, -50%) scale(0.2); opacity: 1; }
+  40%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(3.2); opacity: 0; }
+}
+
+@keyframes eruptionRing {
+  0%   { transform: translate(-50%, -50%) scale(0.3); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(9); opacity: 0; }
+}
+
+@keyframes eruptionParticle {
+  0%   { transform: translate(-50%, -50%) translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eruption-core, .eruption-ring, .eruption-particle {
+    animation: none;
+    opacity: 0;
+  }
 }
